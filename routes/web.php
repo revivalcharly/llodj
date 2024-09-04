@@ -53,6 +53,13 @@ Route::get('/compte', function () {
     $compte1->Commentaire = "https://www.comptabilisation.fr/compte.php?compta_n=1012&nom=Capital-souscrit-appele-non-verse&i=2";
     $compte1->save();
 
+    $compte3 = new \App\Models\Compte(); 
+    $compte3->Numero = "101300000";
+    $compte3->Libelle = "Capital souscrit – appele, verse";
+    $compte3->Debit = 0.0;
+    $compte3->Credit = 0.0;
+    $compte3->Commentaire = "https://www.comptabilisation.fr/compte.php?compta_n=1013&nom=Capital-souscrit-appele-verse&i=3";
+    $compte3->save();
 
     
     return $compte;
