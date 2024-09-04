@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('comptes', function (Blueprint $table) {
             $table->id();
-            $table->string('Numero',9);
+            $table->string('Numero',9)->unique();
             $table->string('Libelle',255);
             $table->decimal('Debit',12,2);
             $table->decimal('Credit',12,2);
